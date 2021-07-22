@@ -1,0 +1,18 @@
+$primary: #007a7a;
+$secondary: #003f5a;
+$info: #ebd9c8;
+
+// orange: #fea02f #007a7a
+
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+.logo {
+  font-family: 'Oleo Script Swash Caps', sans-serif;
+  font-size: 5vw;
+}
+
+.nav {
+  font-size: 1.15vw;
+  font-family: 'Sigmar One', sans-serif;
+}
