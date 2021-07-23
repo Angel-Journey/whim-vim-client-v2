@@ -9,6 +9,8 @@ import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
+import CreateWhim from './components/CreateWhim/CreateWhim'
+import IndexWhims from './components/IndexWhims/IndexWhims'
 
 class App extends Component {
   constructor (props) {
@@ -58,6 +60,12 @@ class App extends Component {
           )} />
           <Route path='/sign-in' render={() => (
             <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-whim' render={() => (
+            <CreateWhim msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/index-whims' render={() => (
+            <IndexWhims msgAlert={this.msgAlert} user={user}/>
           )} />
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
