@@ -5,6 +5,7 @@ import messages from '../AutoDismissAlert/messages'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
 // import Accordion from 'react-bootstrap/Accordion'
 import Spinner from 'react-bootstrap/Spinner'
 
@@ -209,7 +210,7 @@ class IndexWhims extends Component {
           <Button
             className="button"
             variant="secondary"
-            href={'#create-potluck'}
+            href={'#create-whim'}
           >
             Add Whim</Button>
           <p></p>
@@ -247,6 +248,7 @@ class IndexWhims extends Component {
                   >
                     Edit
                   </Button>
+                  <p></p>
                 </li>
                 // {<Accordion>
                 //   <Card border="primary">
@@ -305,6 +307,47 @@ class IndexWhims extends Component {
                 //   <p></p>
                 // </li>
               ))}
+              <div>
+                <CardGroup>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <small className="text-muted">Last updated 3 mins ago</small>
+                    </Card.Footer>
+                  </Card>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This card has supporting text below as a natural lead-in to additional
+                        content.{' '}
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <small className="text-muted">Last updated 3 mins ago</small>
+                    </Card.Footer>
+                  </Card>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title>Card title</Card.Title>
+                      <Card.Text>
+                        This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to
+                        show that equal height action.
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <small className="text-muted">Last updated 3 mins ago</small>
+                    </Card.Footer>
+                  </Card>
+                </CardGroup>
+              </div>
             </Card>
           </ul>
         </div>
@@ -320,6 +363,47 @@ class IndexWhims extends Component {
               {whimsJsx}
             </Card.Body>
           </Card>
+        </div>
+        <div>
+          <CardGroup>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
+            </Card>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This card has supporting text below as a natural lead-in to additional
+                  content.{' '}
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
+            </Card>
+            <Card>
+              <Card.Body>
+                <Card.Title>Card title</Card.Title>
+                <Card.Text>
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This card has even longer content than the first to
+                  show that equal height action.
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
+            </Card>
+          </CardGroup>
         </div>
       </div>
     )
