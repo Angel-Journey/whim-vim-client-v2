@@ -1,6 +1,6 @@
 {
   "name": "whim-vim-client-v2",
-  "homepage": "https://<angel-journey>.github.io/<whim-vim-client-v2>",
+  "homepage": "https://angel-journey.github.io/whim-vim-client-v2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
