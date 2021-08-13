@@ -1,16 +1,19 @@
 import React, { Component, Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
 
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from './components/AutoDismissAlert/AutoDismissAlert'
 import Header from './components/Header/Header'
 import SignUp from './components/SignUp/SignUp'
+import LinkedInSignIn from './components/LinkedInSignIn/LinkedInSignIn'
 import SignIn from './components/SignIn/SignIn'
 import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 import CreateWhim from './components/CreateWhim/CreateWhim'
 import IndexWhims from './components/IndexWhims/IndexWhims'
+import LITest from './components/LITest/LITest'
+import { LinkedInPopUp } from 'react-linkedin-login-oauth2'
 
 class App extends Component {
   constructor (props) {
@@ -61,6 +64,17 @@ class App extends Component {
           <Route path='/sign-in' render={() => (
             <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
+          <Route path='/li-sign-in' render={() => (
+            <LinkedInSignIn msgAlert={this.msgAlert} setUser={this.setUser} />
+          )} />
+
+          <BrowserRouter>
+            <Switch >
+              <Route exact path="/linkedin" component={LinkedInPopUp} />
+              <Route path="/" component={LITest} />
+            </Switch>
+          </BrowserRouter>
+
           <AuthenticatedRoute user={user} path='/create-whim' render={() => (
             <CreateWhim msgAlert={this.msgAlert} user={user} />
           )} />
